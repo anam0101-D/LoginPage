@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in</title>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana", sans-serif;
+  }
+
+  body{
+    background-image: url("https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=900&t=st=1726971320~exp=1726971920~hmac=9e9e5210c1454456e61df754cda6793b7fe528c4111edfe9a515d8df4fa2eb47");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 79vh;
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+    margin-top: 40%;
+  }
+
+  .container{
+    width: 260px;
+    height: 260px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 1rem;
+    margin-left: 15px;
+    height: 30px;
+    width: 220px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 15px;
+    height: 35px;
+    width: 231px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    border: 1px solid black;
+    background-image: linear-gradient(150deg, rgb(0, 255, 145), rgb(255, 230, 0), rgb(0, 179, 255));
+    color: black;
+    transition: 0.2s;
+  }
+
+  @media screen and (min-width: 375px) {
+    h1{
+    color: white;
+    text-align: center;
+    margin-top: 34%;
+  }
+
+    .container{
+    width: 315px;
+    height: 310px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 1.5rem;
+    margin-left: 15px;
+    height: 35px;
+    width: 272px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 15px;
+    height: 45px;
+    width: 285px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-image: linear-gradient(-130deg, rgb(230, 0, 255), rgb(0, 190, 9), rgb(255, 238, 0));
+  }
+  }
+
+  @media screen and (min-width: 425px) {
+    h1{
+    color: white;
+    text-align: center;
+    margin-top: 30%;
+  }
+
+    .container{
+    width: 365px;
+    height: 310px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 1.5rem;
+    margin-left: 15px;
+    height: 40px;
+    width: 320px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 15px;
+    height: 45px;
+    width: 335px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-image: linear-gradient(400deg, rgb(255, 0, 25), rgb(137, 0, 190), rgb(255, 238, 0));
+  }
+  }
+
+  @media screen and (min-width: 768px) {
+    body{
+      height: 87.4vh;
+    }
+
+    h1{
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 65px;
+  }
+
+    .container{
+    width: 600px;
+    height: 500px;
+    margin-top: 3rem;
+    border-radius: 30px;
+    margin-left: 85px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 3rem;
+    margin-left: 47px;
+    height: 80px;
+    width: 490px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    font-size: xx-large;
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 3rem;
+    margin-left: 50px;
+    height: 80px;
+    width: 498px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-image: linear-gradient(210deg, rgb(0, 255, 247), rgb(183, 0, 255), rgb(255, 94, 0));
+  }
+  }
+
+@media screen and (min-width: 1024px) {
+    h1{
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 50px;
+  }
+
+    .container{
+    width: 500px;
+    height: 400px;
+    margin-top: 3rem;
+    border-radius: 40px;
+    margin-left: 260px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 2rem;
+    margin-left: 35px;
+    height: 40px;
+    width: 410px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 50px;
+    margin-top: 2rem;
+    margin-left: 40px;
+    height: 60px;
+    width: 425px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-image: linear-gradient(130deg, rgb(255, 0, 25), rgb(137, 0, 190), rgb(255, 238, 0));
+  }
+  }
+
+@media screen and (min-width: 1440px) {
+  body{
+    height: 85.8vh;
+  }
+    h1{
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 50px;
+  }
+
+    .container{
+    width: 40%;
+    height: 70%;
+    margin-top: 3rem;
+    border-radius: 50px;
+    margin-left: 450px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.501);
+  }
+
+  .container input{
+    margin-top: 3rem;
+    margin-left: 8%;
+    height: 40px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+
+  button{
+    border: 1px solid white;
+    border-radius: 50px;
+    margin-top: 2rem;
+    margin-left: 8%;
+    height: 60px;
+    width: 85%;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-image: linear-gradient(130deg, rgb(16, 187, 255), rgb(234, 0, 255), rgb(94, 255, 0));
+  }
+  }
+</style>
+
+<body>
+
+  <h1>Log in</h1>
+  
+  <div class="container">
+    <input type="text" id="email" placeholder="Email or phone number" required>
+    <input type="password" id="pass" placeholder="Password" required>
+    <button type="button" id="Login" value="button">Login</button>
+  </div>
+
+</body>
+</html>
